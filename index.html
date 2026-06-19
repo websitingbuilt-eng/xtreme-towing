@@ -1,0 +1,1427 @@
+<!-- 
+  CLOUDFLARE PAGES DEPLOYMENT:
+  Framework preset: None
+  Build command: (leave empty)
+  Build output directory: /
+  Production branch: main
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xtreme Towing Salinas | 24/7 Towing & Roadside Assistance in Salinas</title>
+  <meta name="description" content="Xtreme Towing Salinas provides 24/7 towing in Salinas, CA. Call now for urgent roadside help, lockouts, flat tires, and recovery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");</script>
+  <style>
+    :root {
+      --black: #060708;
+      --ink: #101317;
+      --steel: #1d232a;
+      --slate: #303943;
+      --line: #d7dce2;
+      --paper: #f4f2eb;
+      --white: #ffffff;
+      --muted: #66717d;
+      --soft: #eef0eb;
+      --yellow: #ffd22e;
+      --yellow-2: #f5b700;
+      --orange: #f36b21;
+      --green: #23c767;
+      --red: #d93a32;
+      --font-head: "Archivo", Arial, sans-serif;
+      --font-body: "Inter", Arial, sans-serif;
+      --max: 1200px;
+      --nav-h: 78px;
+      --radius: 8px;
+      --shadow: 0 24px 60px rgba(6,7,8,.18);
+      --shadow-dark: 0 24px 70px rgba(0,0,0,.35);
+      --ease: cubic-bezier(.2,.8,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    body.menu-open { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    section { padding: 86px 22px; }
+    .container { width: min(100%, var(--max)); margin: 0 auto; }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--orange);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .kicker::before {
+      content: "";
+      width: 30px;
+      height: 4px;
+      background: var(--yellow);
+      box-shadow: 12px 0 0 var(--black);
+    }
+    h1, h2, h3 { margin: 0; font-family: var(--font-head); letter-spacing: -.02em; }
+    h1 {
+      max-width: 720px;
+      margin-top: 18px;
+      font-size: clamp(3.2rem, 6vw, 6.05rem);
+      line-height: .92;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin-top: 10px;
+      font-size: clamp(2.1rem, 4.6vw, 4.8rem);
+      line-height: .95;
+      text-transform: uppercase;
+    }
+    h3 { font-size: 1.08rem; line-height: 1.2; }
+    p { margin: 0; }
+    .section-lede {
+      max-width: 760px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 14px 20px;
+      border: 2px solid var(--black);
+      border-radius: var(--radius);
+      font-weight: 900;
+      transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+      white-space: nowrap;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      color: var(--black);
+      background: var(--yellow);
+      box-shadow: 6px 6px 0 var(--black);
+    }
+    .btn-primary:hover { background: #ffe16a; box-shadow: 8px 8px 0 var(--black); }
+    .btn-secondary {
+      color: var(--white);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.38);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,.14); }
+    .live-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(35,199,103,.75);
+      animation: pulse 1.5s infinite;
+      flex: 0 0 auto;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 80;
+      background: rgba(244,242,235,.94);
+      border-bottom: 1px solid rgba(16,19,23,.12);
+      backdrop-filter: blur(16px);
+      transition: box-shadow .24s var(--ease), background .24s var(--ease);
+    }
+    .site-header.scrolled {
+      background: rgba(244,242,235,.98);
+      box-shadow: 0 14px 40px rgba(0,0,0,.12);
+    }
+    .nav {
+      min-height: var(--nav-h);
+      width: min(100%, calc(var(--max) + 32px));
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      color: var(--yellow);
+      background: var(--black);
+      border-radius: 6px;
+      font-weight: 950;
+      box-shadow: inset 0 -6px 0 rgba(255,210,46,.2);
+    }
+    .brand-text {
+      display: grid;
+      line-height: 1;
+    }
+    .brand-text strong {
+      font-family: var(--font-head);
+      font-weight: 950;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+    .brand-text span {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      justify-self: center;
+      display: flex;
+      gap: 22px;
+      color: #303943;
+      font-size: .9rem;
+      font-weight: 800;
+    }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-phone {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 14px;
+      border: 2px solid var(--black);
+      border-radius: 999px;
+      color: var(--black);
+      background: var(--yellow);
+      font-weight: 950;
+      white-space: nowrap;
+    }
+    .nav-cta {
+      min-height: 46px;
+      color: var(--white);
+      background: var(--black);
+      box-shadow: none;
+      padding-inline: 18px;
+    }
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 2px solid var(--black);
+      border-radius: var(--radius);
+      color: var(--black);
+      background: var(--paper);
+    }
+    .menu-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 5px auto;
+      background: currentColor;
+      transition: transform .2s var(--ease), opacity .2s var(--ease);
+    }
+    .menu-open .menu-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .menu-open .menu-toggle span:nth-child(2) { opacity: 0; }
+    .menu-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .hero {
+      min-height: 100vh;
+      padding-top: calc(var(--nav-h) + 48px);
+      display: flex;
+      align-items: stretch;
+      color: var(--white);
+      background:
+        linear-gradient(115deg, rgba(6,7,8,.96) 0 56%, rgba(255,210,46,.96) 56.2% 100%),
+        radial-gradient(circle at 18% 18%, rgba(243,107,33,.18), transparent 420px);
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 18px;
+      background: repeating-linear-gradient(135deg, var(--yellow) 0 24px, var(--black) 24px 48px);
+      z-index: 1;
+    }
+    .hero-grid {
+      min-height: calc(100vh - var(--nav-h) - 48px);
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(390px, .68fr);
+      gap: clamp(28px, 4.2vw, 56px);
+      align-items: center;
+    }
+    .hero-copy {
+      padding: 28px 0 44px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 13px;
+      border: 1px solid rgba(255,210,46,.45);
+      border-radius: 999px;
+      color: var(--yellow);
+      background: rgba(255,210,46,.09);
+      font-size: .78rem;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .hero-lede {
+      max-width: 650px;
+      margin-top: 16px;
+      padding-left: 18px;
+      border-left: 4px solid var(--yellow);
+      color: #dce2e8;
+      font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+      font-weight: 560;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .hero-actions .btn-primary { min-height: 62px; font-size: 1.06rem; }
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 680px;
+      margin-top: 26px;
+    }
+    .proof-item {
+      min-height: 84px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.06);
+    }
+    .proof-item strong {
+      display: block;
+      color: var(--yellow);
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+    .proof-item span {
+      display: block;
+      margin-top: 7px;
+      color: #c4ccd5;
+      font-size: .82rem;
+      font-weight: 750;
+    }
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      min-height: 560px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 0;
+    }
+    .dispatch-board {
+      width: min(100%, 500px);
+      color: var(--ink);
+      background: var(--paper);
+      border: 3px solid var(--black);
+      border-radius: 12px;
+      box-shadow: 18px 18px 0 rgba(6,7,8,.88), var(--shadow-dark);
+      overflow: hidden;
+    }
+    .board-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 18px;
+      color: var(--white);
+      background: var(--black);
+    }
+    .board-top strong {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+    .board-body { padding: 18px; }
+    .board-alert {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border: 2px solid var(--black);
+      border-radius: var(--radius);
+      background: var(--yellow);
+      font-weight: 950;
+    }
+    .truck-scene {
+      position: relative;
+      min-height: 165px;
+      margin: 14px 0;
+      border: 2px solid var(--black);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, #29313a 0 44%, #171b21 44% 100%);
+      overflow: hidden;
+    }
+    .truck-scene::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% 16px;
+      height: 58px;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 62px, rgba(255,210,46,.8) 62px 92px),
+        #090a0c;
+      transform: skewY(-3deg);
+    }
+    .truck {
+      position: absolute;
+      left: 44px;
+      right: 38px;
+      bottom: 42px;
+      height: 82px;
+    }
+    .truck-bed {
+      position: absolute;
+      left: 0;
+      bottom: 18px;
+      width: 64%;
+      height: 26px;
+      background: var(--yellow);
+      border: 3px solid #050505;
+      transform: skewX(-14deg);
+    }
+    .truck-cab {
+      position: absolute;
+      right: 64px;
+      bottom: 18px;
+      width: 118px;
+      height: 60px;
+      background: var(--yellow);
+      border: 3px solid #050505;
+      border-radius: 8px 12px 5px 5px;
+    }
+    .truck-cab::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: 14px;
+      width: 42px;
+      height: 24px;
+      background: #17202a;
+      border: 3px solid #050505;
+      border-radius: 5px;
+    }
+    .truck-hook {
+      position: absolute;
+      left: 38px;
+      bottom: 46px;
+      width: 110px;
+      height: 3px;
+      background: #050505;
+      transform: rotate(-16deg);
+      transform-origin: right center;
+    }
+    .truck-hook::after {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 12px;
+      height: 22px;
+      border-left: 3px solid #050505;
+      border-bottom: 3px solid #050505;
+      transform: translateY(-3px) rotate(-25deg);
+    }
+    .wheel {
+      position: absolute;
+      bottom: 0;
+      width: 38px;
+      height: 38px;
+      border: 7px solid #050505;
+      border-radius: 50%;
+      background: #f7f7f7;
+    }
+    .wheel.one { left: 82px; }
+    .wheel.two { right: 86px; }
+    .board-lines {
+      display: grid;
+      gap: 8px;
+    }
+    .board-line {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 9px 11px;
+      border: 1px solid #cfd4d9;
+      border-radius: var(--radius);
+      background: #fff;
+      font-weight: 800;
+    }
+    .board-line b {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      color: var(--yellow);
+      background: var(--black);
+    }
+
+    .service-section {
+      background:
+        linear-gradient(180deg, rgba(255,210,46,.16), transparent 240px),
+        var(--paper);
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(280px, .45fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+    .head-note {
+      padding: 18px;
+      border-left: 6px solid var(--yellow);
+      color: var(--muted);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      font-weight: 650;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .service-card {
+      min-height: 255px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border: 1px solid #d5d9de;
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: 0 16px 42px rgba(16,19,23,.08);
+      transition: transform .22s var(--ease), box-shadow .22s var(--ease);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 56px rgba(16,19,23,.14);
+    }
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      color: var(--black);
+      background: var(--yellow);
+      font-size: 1.7rem;
+      box-shadow: inset 0 -7px 0 rgba(0,0,0,.12);
+    }
+    .service-card p {
+      margin-top: 10px;
+      color: var(--muted);
+    }
+    .service-tag {
+      display: inline-flex;
+      width: fit-content;
+      margin-top: 20px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: var(--black);
+      background: var(--soft);
+      font-size: .76rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .dark-section {
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(255,210,46,.045) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,.035) 1px, transparent 1px),
+        var(--ink);
+      background-size: 44px 44px;
+    }
+    .dark-section .section-lede { color: #b6c0ca; }
+    .trust-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, .6fr) minmax(0, 1fr);
+      gap: 34px;
+      align-items: start;
+      margin-top: 34px;
+    }
+    .trust-callout {
+      position: sticky;
+      top: 105px;
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,210,46,.16), rgba(255,255,255,.05));
+      box-shadow: var(--shadow-dark);
+    }
+    .trust-callout strong {
+      display: block;
+      color: var(--yellow);
+      font-family: var(--font-head);
+      font-size: 3.7rem;
+      line-height: .9;
+    }
+    .trust-callout span {
+      display: block;
+      margin-top: 10px;
+      color: #c4ccd5;
+      font-weight: 760;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .trust-point {
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      background: rgba(255,255,255,.055);
+    }
+    .trust-point p {
+      margin-top: 10px;
+      color: #b6c0ca;
+    }
+    .trust-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      color: var(--black);
+      background: var(--yellow);
+      font-size: 1.25rem;
+    }
+
+    .steps-section { background: var(--white); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+      counter-reset: step;
+    }
+    .step {
+      position: relative;
+      min-height: 255px;
+      padding: 28px;
+      border-radius: 18px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: block;
+      margin-bottom: 34px;
+      color: var(--orange);
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 950;
+    }
+    .step::after {
+      content: "";
+      position: absolute;
+      inset: auto -12px -12px auto;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--yellow);
+      opacity: .55;
+    }
+    .step p {
+      margin-top: 10px;
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+
+    .reviews-section {
+      color: var(--white);
+      background: #13171c;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+    .review-card {
+      min-height: 230px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      box-shadow: 0 20px 55px rgba(0,0,0,.18);
+    }
+    .review-card.feature {
+      grid-column: span 2;
+      color: var(--ink);
+      background: var(--yellow);
+      border-color: transparent;
+    }
+    .stars {
+      color: var(--yellow);
+      letter-spacing: .05em;
+      font-size: .96rem;
+    }
+    .review-card.feature .stars { color: var(--black); }
+    .review-card h3 { margin-top: 10px; }
+    .review-card p {
+      margin-top: 12px;
+      color: #c7d0d9;
+    }
+    .review-card.feature p { color: #2d3136; }
+    .review-note {
+      margin-top: 20px;
+      color: #b6c0ca;
+      font-size: .94rem;
+    }
+
+    .area-section {
+      background:
+        linear-gradient(90deg, rgba(16,19,23,.06) 1px, transparent 1px),
+        var(--paper);
+      background-size: 42px 42px;
+    }
+    .area-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, .7fr) minmax(0, 1fr);
+      gap: 24px;
+      margin-top: 34px;
+    }
+    .area-panel {
+      padding: 26px;
+      border-radius: 18px;
+      background: var(--black);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .area-panel p { margin-top: 12px; color: #c4ccd5; }
+    .area-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .area-list li {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: 0 12px 34px rgba(16,19,23,.08);
+      font-weight: 900;
+    }
+
+    .about-band {
+      display: grid;
+      grid-template-columns: minmax(260px, .48fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      padding: 34px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 20% 0, rgba(255,210,46,.22), transparent 320px),
+        rgba(255,255,255,.055);
+      box-shadow: var(--shadow-dark);
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .stat {
+      min-height: 125px;
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .stat strong {
+      display: block;
+      color: var(--orange);
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    .faq-section { background: var(--white); }
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      max-width: 920px;
+      margin: 34px auto 0;
+    }
+    .faq-item {
+      border: 1px solid #d8dde2;
+      border-radius: 14px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      border: 0;
+      color: var(--ink);
+      background: transparent;
+      text-align: left;
+      font-weight: 950;
+    }
+    .faq-question b {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--yellow);
+      transition: transform .22s var(--ease);
+      flex: 0 0 auto;
+    }
+    .faq-item.active .faq-question b { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .28s var(--ease);
+    }
+    .faq-answer p {
+      padding: 0 20px 20px;
+      color: var(--muted);
+    }
+
+    .contact-section {
+      color: var(--white);
+      background:
+        linear-gradient(115deg, var(--ink) 0 62%, #222a32 62.2% 100%);
+    }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, .55fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items: start;
+      margin-top: 34px;
+    }
+    .contact-card {
+      padding: 26px;
+      border-radius: 18px;
+      background: var(--yellow);
+      color: var(--ink);
+      box-shadow: 12px 12px 0 rgba(0,0,0,.36);
+    }
+    .contact-card h3 {
+      font-size: 1.55rem;
+      text-transform: uppercase;
+    }
+    .contact-line {
+      display: grid;
+      gap: 4px;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(6,7,8,.18);
+    }
+    .contact-line span {
+      color: #4a4f55;
+      font-size: .78rem;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .contact-line a, .contact-line strong {
+      color: var(--ink);
+      font-weight: 950;
+    }
+    .form-wrap {
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      box-shadow: var(--shadow-dark);
+    }
+    .form-note {
+      margin-bottom: 16px;
+      padding: 15px 16px;
+      border-radius: 12px;
+      color: var(--black);
+      background: var(--yellow);
+      font-weight: 900;
+    }
+    form {
+      display: grid;
+      gap: 14px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    label {
+      display: grid;
+      gap: 7px;
+      color: #e7edf3;
+      font-size: .88rem;
+      font-weight: 850;
+    }
+    input, select, textarea {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 14px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 12px;
+      color: var(--ink);
+      background: var(--white);
+      outline: none;
+    }
+    textarea { min-height: 126px; resize: vertical; }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--yellow);
+      box-shadow: 0 0 0 4px rgba(255,210,46,.22);
+    }
+    .full { grid-column: 1 / -1; }
+    .form-status {
+      display: none;
+      padding: 14px;
+      border-radius: 12px;
+      color: #062811;
+      background: #c7f8d7;
+      font-weight: 850;
+    }
+    .form-status.show { display: block; }
+
+    .site-footer {
+      padding: 54px 22px 90px;
+      color: #dce4ec;
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr repeat(3, minmax(0, .75fr));
+      gap: 24px;
+    }
+    .footer-brand {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 950;
+      text-transform: uppercase;
+    }
+    .footer-grid h3 {
+      color: var(--white);
+      font-size: .92rem;
+      text-transform: uppercase;
+    }
+    .footer-grid p, .footer-grid a {
+      color: #aeb8c2;
+      margin-top: 7px;
+    }
+    .footer-grid a:hover { color: var(--yellow); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: #aeb8c2;
+      font-size: .9rem;
+    }
+    .mobile-call {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 90;
+      display: none;
+      border-radius: 12px;
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s var(--ease), transform .65s var(--ease);
+    }
+    .js .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(35,199,103,.75); }
+      70% { box-shadow: 0 0 0 10px rgba(35,199,103,0); }
+      100% { box-shadow: 0 0 0 0 rgba(35,199,103,0); }
+    }
+
+    @media (max-width: 1050px) {
+      .nav {
+        grid-template-columns: auto 1fr auto;
+      }
+      .nav-links {
+        position: fixed;
+        inset: var(--nav-h) 0 auto 0;
+        display: grid;
+        gap: 0;
+        padding: 8px 18px 20px;
+        background: rgba(6,7,8,.98);
+        color: var(--white);
+        transform: translateY(-120%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform .24s var(--ease), opacity .24s var(--ease), visibility .24s var(--ease);
+      }
+      .menu-open .nav-links {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .nav-links a {
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+      .nav-cta { display: none; }
+      .menu-toggle { display: block; justify-self: end; }
+      .nav-phone { justify-self: end; }
+      .hero {
+        background:
+          linear-gradient(180deg, rgba(6,7,8,.98) 0 72%, rgba(255,210,46,.96) 72.2% 100%);
+      }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-bottom: 76px;
+      }
+      .hero-visual { min-height: auto; align-items: start; justify-content: start; }
+      .hero-visual { padding-top: 0; }
+      .dispatch-board { max-width: 620px; box-shadow: 10px 10px 0 rgba(6,7,8,.88), var(--shadow-dark); }
+      .section-head, .trust-layout, .area-layout, .about-band, .contact-layout, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .trust-callout { position: static; }
+      .service-grid, .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .review-card.feature { grid-column: span 1; }
+      .mobile-call { display: inline-flex; }
+    }
+
+    @media (max-width: 680px) {
+      :root { --nav-h: 68px; }
+      section { padding: 64px 16px; }
+      .nav { gap: 9px; padding: 0 12px; }
+      .brand-mark { width: 40px; height: 40px; }
+      .brand-text strong { font-size: .92rem; }
+      .brand-text span { display: none; }
+      .nav-phone {
+        min-height: 40px;
+        padding: 0 9px;
+        font-size: .78rem;
+      }
+      .menu-toggle { width: 42px; height: 42px; }
+      .hero { min-height: auto; padding-top: calc(var(--nav-h) + 32px); }
+      .hero-copy { padding: 24px 0 16px; }
+      h1 { font-size: clamp(3.2rem, 17vw, 5.2rem); }
+      h2 { font-size: clamp(2.15rem, 12vw, 3.6rem); }
+      .hero-actions { display: grid; }
+      .hero-actions .btn { width: 100%; white-space: normal; text-align: center; }
+      .hero-proof, .service-grid, .trust-grid, .steps, .reviews-grid, .area-list, .stats, .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .dispatch-board {
+        width: 100%;
+        border-width: 2px;
+        box-shadow: 7px 7px 0 rgba(6,7,8,.88);
+      }
+      .board-body { padding: 16px; }
+      .truck-scene { min-height: 190px; }
+      .truck { left: 22px; right: 16px; transform: scale(.86); transform-origin: bottom center; }
+      .service-card, .step, .review-card, .area-panel, .area-list li, .about-band, .contact-card, .form-wrap {
+        border-radius: 14px;
+      }
+      .full { grid-column: auto; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Xtreme Towing Salinas home">
+        <span class="brand-mark">XT</span>
+        <span class="brand-text">
+          <strong>Xtreme Towing</strong>
+          <span>Salinas, California</span>
+        </span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#service-area">Service Area</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-phone" href="tel:+18313204327">Call (831) 320-4327</a>
+      <a class="btn nav-cta" href="tel:+18313204327">Call Now</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="hero-badge"><span class="live-dot"></span>24/7 Emergency Towing</div>
+          <h1>Stranded in Salinas? Help Starts With One Call.</h1>
+          <p class="hero-lede">Xtreme Towing Salinas is open 24 hours for drivers who need towing, roadside assistance, lockout help, recovery, or a quick next step when the vehicle will not move.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+18313204327">Call Now: (831) 320-4327</a>
+            <a class="btn btn-secondary" href="#contact">Request a Tow</a>
+          </div>
+          <div class="hero-proof" aria-label="Business quick facts">
+            <div class="proof-item"><strong>24/7</strong><span>Open 24 hours</span></div>
+            <div class="proof-item"><strong>3.4</strong><span>Google rating</span></div>
+            <div class="proof-item"><strong>48</strong><span>Reviews listed</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Dispatch status illustration">
+          <aside class="dispatch-board">
+            <div class="board-top">
+              <strong>Salinas Dispatch</strong>
+              <span class="hero-badge"><span class="live-dot"></span>Available</span>
+            </div>
+            <div class="board-body">
+              <div class="board-alert">Fastest service: call (831) 320-4327</div>
+              <div class="truck-scene" aria-hidden="true">
+                <div class="truck">
+                  <div class="truck-hook"></div>
+                  <div class="truck-bed"></div>
+                  <div class="truck-cab"></div>
+                  <div class="wheel one"></div>
+                  <div class="wheel two"></div>
+                </div>
+              </div>
+              <div class="board-lines">
+                <div class="board-line"><b>1</b><span>Share your location</span></div>
+                <div class="board-line"><b>2</b><span>Tell us the vehicle issue</span></div>
+                <div class="board-line"><b>3</b><span>Get towing or roadside help moving</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="kicker reveal">Services</span>
+            <h2 class="reveal">Roadside help for the moment you are stuck.</h2>
+          </div>
+          <p class="head-note reveal">The Google listing identifies Xtreme Towing Salinas as a towing service open 24 hours. These are practical towing and roadside services drivers commonly need in Salinas.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div><div class="service-icon">🚚</div><h3>Local Towing</h3><p>Call for a tow when your vehicle is disabled, stuck, or no longer safe to drive.</p></div><span class="service-tag">24 hour help</span></article>
+          <article class="service-card reveal"><div><div class="service-icon">🛻</div><h3>Flatbed Transport</h3><p>Careful vehicle transport for cars that need to move without adding miles or extra wear.</p></div><span class="service-tag">Vehicle transport</span></article>
+          <article class="service-card reveal"><div><div class="service-icon">🔑</div><h3>Lockouts</h3><p>Locked out in a parking lot, driveway, or roadside spot? Call and get help started.</p></div><span class="service-tag">Roadside assist</span></article>
+          <article class="service-card reveal"><div><div class="service-icon">🔋</div><h3>Jump Starts</h3><p>Dead battery at home, work, or a store? Request roadside help and get moving again.</p></div><span class="service-tag">Battery help</span></article>
+          <article class="service-card reveal"><div><div class="service-icon">🛞</div><h3>Flat Tire Help</h3><p>If a tire fails and you cannot continue safely, call for roadside support or towing.</p></div><span class="service-tag">Tire trouble</span></article>
+          <article class="service-card reveal"><div><div class="service-icon">⛽</div><h3>Fuel & Recovery</h3><p>Out of fuel, stuck after a breakdown, or dealing with recovery needs? One call starts the process.</p></div><span class="service-tag">Recovery ready</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="why">
+      <div class="container">
+        <span class="kicker reveal">Why Choose Us</span>
+        <h2 class="reveal">Built around urgent calls, not slow quote forms.</h2>
+        <p class="section-lede reveal">When someone needs towing, the first job is lowering panic: clear phone access, simple instructions, and no confusion about whether help is available.</p>
+        <div class="trust-layout">
+          <aside class="trust-callout reveal">
+            <strong>Open 24</strong>
+            <span>The listing shows Xtreme Towing Salinas as open 24 hours, so the phone number stays front and center across the whole site.</span>
+          </aside>
+          <div class="trust-grid">
+            <article class="trust-point reveal"><div class="trust-icon">⚡</div><h3>Fast Phone Contact</h3><p>Every main action sends drivers directly to the phone number for the quickest route to help.</p></article>
+            <article class="trust-point reveal"><div class="trust-icon">📍</div><h3>Salinas Based</h3><p>Located at 223 Harrison Rd Ste A, with service focused around Salinas and nearby Monterey County areas.</p></article>
+            <article class="trust-point reveal"><div class="trust-icon">💬</div><h3>Real Review Signals</h3><p>Customer feedback mentions quick response, prompt arrival, pricing, fees, and service experience.</p></article>
+            <article class="trust-point reveal"><div class="trust-icon">🧭</div><h3>Simple Dispatch Flow</h3><p>Share your location, explain the issue, and get the right towing or roadside help moving.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section" id="how-it-works">
+      <div class="container">
+        <span class="kicker reveal">How It Works</span>
+        <h2 class="reveal">No guessing what happens next.</h2>
+        <div class="steps">
+          <article class="step reveal"><h3>Call or request online</h3><p>For urgent help, call (831) 320-4327. Use the form for non-emergency tow requests.</p></article>
+          <article class="step reveal"><h3>Share the exact location</h3><p>Give the closest address, intersection, parking lot, or landmark so help can find you.</p></article>
+          <article class="step reveal"><h3>Get back to safety</h3><p>Towing or roadside support can be coordinated so you can move out of the stressful spot.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <span class="kicker reveal">Reviews</span>
+        <h2 class="reveal">Customer feedback from the provided listing.</h2>
+        <p class="section-lede reveal">Google lists Xtreme Towing Salinas at 3.4 stars from 48 reviews. The cards below use the review text provided in the Maps paste, including both positive and critical comments.</p>
+        <div class="reviews-grid">
+          <article class="review-card feature reveal"><div class="stars">★★★★★</div><h3>Google R.</h3><p>"Thx again for the Great service and Quick response this Morning! 😊"</p></article>
+          <article class="review-card reveal"><div class="stars">★☆☆☆☆</div><h3>Google R.</h3><p>"Also throwing trash out the window in case the company's."</p></article>
+          <article class="review-card reveal"><div class="stars">★☆☆☆☆</div><h3>Google R.</h3><p>"Had my car towed for not having a parking pass at some apartment complex."</p></article>
+          <article class="review-card reveal"><div class="stars">★☆☆☆☆</div><h3>S S.</h3><p>"Worst tow place ever! Makes up their own prices! And takes advantage of handicap/ disabled elderly people always coming through the same apartment complex picking on handy-cap people vehicles towing cars with HANDY-CAP plact inside vehicle ..."</p></article>
+          <article class="review-card reveal"><div class="stars">★☆☆☆☆</div><h3>Ad1cutz *.</h3><p>"I wish 0 stars was an option, customer service was extremely disrespectful worker named Jesus/Chuy not was only being super rude using fail language but also made an orderly lady being helped out before me cry. Don't get me started on how ..."</p></article>
+          <article class="review-card reveal"><div class="stars">★★★★★</div><h3>Lance M.</h3><p>"My business is Central Coast Properties, specializing in both sales and property management. On a property I manage, tenants who just moved out left two junk cars on the property. This makes it more complicated than had they left the cars ..."</p></article>
+        </div>
+        <p class="review-note reveal">Review topics shown in the Google listing include fair pricing, prompt arrival, rude, and fee.</p>
+      </div>
+    </section>
+
+    <section class="area-section" id="service-area">
+      <div class="container">
+        <span class="kicker reveal">Service Area</span>
+        <h2 class="reveal">Salinas towing with nearby coverage.</h2>
+        <p class="section-lede reveal">Based from 223 Harrison Rd Ste A in Salinas, Xtreme Towing Salinas comes to drivers across the city and nearby communities. Call with your current location to confirm availability.</p>
+        <div class="area-layout">
+          <article class="area-panel reveal">
+            <h3>We come to you</h3>
+            <p>Roadside emergencies usually happen in awkward places: shoulders, lots, driveways, apartments, and business properties. The call should be simple, direct, and location-first.</p>
+          </article>
+          <ul class="area-list reveal">
+            <li>Salinas</li>
+            <li>Harden Ranch</li>
+            <li>Prunedale</li>
+            <li>Castroville</li>
+            <li>Marina</li>
+            <li>Seaside</li>
+            <li>Monterey County</li>
+            <li>Nearby roads and lots</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="about">
+      <div class="container">
+        <div class="about-band reveal">
+          <div>
+            <span class="kicker">About</span>
+            <h2>Xtreme Towing Salinas</h2>
+            <p class="section-lede">Xtreme Towing Salinas is a towing service located at 223 Harrison Rd Ste A in Salinas, California. The business is listed as open 24 hours and serves drivers who need towing, roadside assistance, recovery, and practical help when a vehicle problem interrupts the day.</p>
+            <p class="section-lede">No ownership descriptors such as veteran-owned, Latino-owned, LGBTQ+ friendly, or woman-owned were included in the provided Google Maps information.</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>24/7</strong><span>Open 24 hours</span></div>
+            <div class="stat"><strong>48</strong><span>Google reviews listed</span></div>
+            <div class="stat"><strong>3.4</strong><span>Google rating</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <span class="kicker reveal">FAQ</span>
+        <h2 class="reveal">Questions before you call.</h2>
+        <div class="faq-list">
+          <article class="faq-item reveal"><button class="faq-question" type="button"><span>How fast can you get to me?</span><b>+</b></button><div class="faq-answer"><p>Response time depends on truck availability, traffic, weather, and your exact location. For the fastest answer, call (831) 320-4327 and give your current address or nearest cross streets.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question" type="button"><span>Are you available at night or on weekends?</span><b>+</b></button><div class="faq-answer"><p>Yes. The Google Maps listing shows Xtreme Towing Salinas as open 24 hours.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question" type="button"><span>How much does towing cost?</span><b>+</b></button><div class="faq-answer"><p>Price depends on distance, vehicle condition, location, and the type of tow or recovery needed. Ask dispatch for pricing details before the truck is sent.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question" type="button"><span>Can you help with lockouts, flat tires, or a dead battery?</span><b>+</b></button><div class="faq-answer"><p>Towing companies commonly assist with lockouts, jump starts, flat tires, fuel delivery, and recovery. Call to confirm the right service is available for your situation.</p></div></article>
+          <article class="faq-item reveal"><button class="faq-question" type="button"><span>Do you tow from apartments, parking lots, or private property?</span><b>+</b></button><div class="faq-answer"><p>The provided reviews mention apartment complexes, property management, and junk vehicles. Call with the property details so dispatch can explain what information or authorization is needed.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <span class="kicker reveal">Contact</span>
+        <h2 class="reveal">Need a tow? Start here.</h2>
+        <p class="section-lede reveal">If you are in traffic, on the shoulder, or in an unsafe spot, call first. The form is best for non-emergency towing requests or follow-up details.</p>
+        <div class="contact-layout">
+          <aside class="contact-card reveal">
+            <h3>Xtreme Towing Salinas</h3>
+            <div class="contact-line"><span>Emergency Phone</span><a href="tel:+18313204327">(831) 320-4327</a></div>
+            <div class="contact-line"><span>Address</span><strong>223 Harrison Rd Ste A, Salinas, CA 93907</strong></div>
+            <div class="contact-line"><span>Hours</span><strong>Open 24 Hours</strong></div>
+            <div class="contact-line"><span>Service Area</span><strong>Salinas and nearby Monterey County areas</strong></div>
+          </aside>
+          <div class="form-wrap reveal">
+            <div class="form-note">For fastest service, please call <a href="tel:+18313204327">(831) 320-4327</a> directly — this form is for non-emergency requests.</div>
+            <form id="towForm" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="PASTE-CLIENT-ACCESS-KEY-HERE">
+              <input type="hidden" name="subject" value="New Tow Request from Xtreme Towing Salinas Website">
+              <div class="form-grid">
+                <label>Full Name<input type="text" name="name" autocomplete="name" required></label>
+                <label>Phone Number<input type="tel" name="phone" autocomplete="tel" required></label>
+                <label class="full">Current Location / Address<input type="text" name="location" autocomplete="street-address" required></label>
+                <label>Vehicle Type<input type="text" name="vehicle_type" placeholder="Car, truck, SUV, van" required></label>
+                <label>Issue<select name="issue" required><option value="">Select issue</option><option>Breakdown</option><option>Accident</option><option>Lockout</option><option>Flat Tire</option><option>Out of Fuel</option><option>Other</option></select></label>
+                <label class="full">Message / Details<textarea name="message" placeholder="Nearest cross street, vehicle condition, destination, or anything dispatch should know."></textarea></label>
+              </div>
+              <button class="btn btn-primary" type="submit">Request a Tow</button>
+              <div class="form-status" id="formStatus" role="status">Got it! We'll call you back within minutes.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="footer-brand">Xtreme Towing Salinas</div><p>Towing service in Salinas, California, open 24 hours for emergency roadside needs.</p></div>
+        <div><h3>Call</h3><a href="tel:+18313204327">(831) 320-4327</a></div>
+        <div><h3>Address</h3><p>223 Harrison Rd Ste A<br>Salinas, CA 93907</p></div>
+        <div><h3>Hours</h3><p><strong style="color: var(--yellow);">Open 24 Hours</strong></p><p>No ownership or identity badges were listed in the provided Google Maps data.</p></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Xtreme Towing Salinas. All rights reserved.</span>
+        <span>Website by <a href="[ARBEED-WEBSITE-URL]">Arbeed Digital</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mobile-call btn btn-primary" href="tel:+18313204327">Call Now: (831) 320-4327</a>
+
+  <script>
+    const body = document.body;
+    const header = document.querySelector(".site-header");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const faqItems = document.querySelectorAll(".faq-item");
+    const revealEls = document.querySelectorAll(".reveal");
+    const form = document.getElementById("towForm");
+    const formStatus = document.getElementById("formStatus");
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 24);
+    });
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = body.classList.toggle("menu-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+      });
+    });
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+      button.addEventListener("click", () => {
+        const active = item.classList.toggle("active");
+        answer.style.maxHeight = active ? `${answer.scrollHeight}px` : "0px";
+      });
+    });
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach((el) => observer.observe(el));
+    } else {
+      revealEls.forEach((el) => el.classList.add("visible"));
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const submitButton = form.querySelector("button[type='submit']");
+      const originalText = submitButton.textContent;
+      submitButton.textContent = "Sending...";
+      submitButton.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        });
+
+        if (!response.ok) throw new Error("Form submission failed");
+        form.reset();
+        formStatus.textContent = "Got it! We'll call you back within minutes.";
+        formStatus.classList.add("show");
+      } catch (error) {
+        formStatus.textContent = "Please call (831) 320-4327 directly so we can help you faster.";
+        formStatus.classList.add("show");
+      } finally {
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
